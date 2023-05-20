@@ -1,0 +1,11 @@
+# jitpack.yml
+jdk:
+  - openjdk17
+
+publish:
+  repo: jitpack-io/maven
+  group: tech.shiftmc.lib
+  artifact: shiftmclib-root
+  name: ShiftMCLib
+  description: A library for my Minecraft plugins
+  version: 1.0-SNAPSHOT
