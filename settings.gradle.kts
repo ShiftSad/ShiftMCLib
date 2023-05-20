@@ -1,3 +1,2 @@
-
-rootProject.name = "untitled1"
-
+rootProject.name = "shiftmclib-root"
+include("shiftmclib-paper")

@@ -1,27 +1,24 @@
 plugins {
     kotlin("jvm") version "1.8.0"
-    application
 }
 
-group = "org.example"
+group = "tech.shiftmc.lib"
 version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
+// Dependencies available in all modules
 dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
+    // API Kotlin
+    subprojects {
+        // Dependencies inherited by all submodules
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20")
+    }
 }
 
 kotlin {
-    jvmToolchain(8)
-}
-
-application {
-    mainClass.set("MainKt")
+    jvmToolchain(17)
 }
